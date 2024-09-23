@@ -20,13 +20,17 @@ document.getElementById("donationTab").addEventListener("click", (e) => {
   tabSwitch("donationSection");
 
   document.getElementById("donationTab").style.backgroundColor = '#B4F461'
+  document.getElementById("donationTab").style.border = '0px solid #0000004e'
+  document.getElementById("historyTab").style.border = '1px solid #0000004e'
   document.getElementById("historyTab").style.backgroundColor = 'white'
 });
 document.getElementById("historyTab").addEventListener("click", (e) => {
   tabSwitch("historySection");
 
   document.getElementById("historyTab").style.backgroundColor =  '#B4F461'
+  document.getElementById("historyTab").style.border = '0px solid #0000004e'
   document.getElementById("donationTab").style.backgroundColor = 'white'
+  document.getElementById("donationTab").style.border = '1px solid #0000004e'
 });
 
 
