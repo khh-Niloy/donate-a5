@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwindcss and daisyui -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+    />
+    <!-- font -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+      .font {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body class="font">
+    <nav
+      class="w-full flex flex-col items-center justify-center sticky top-0 z-40 backdrop-blur-xl"
+    >
+      <div
+        class="w-full flex flex-row items-center justify-center py-4 bg-[#F9F7F3]"
+      >
+        <div
+          class="flex flex-row gap-y-8 items-center justify-between lg:w-[80%] w-[90%]"
+        >
+          <button
+            id="homeButton"
+            class="bg-[#B4F461] px-5 py-1.5 text-sm font-semibold rounded-lg"
+          >
+            Home
+          </button>
+
+          <div class="flex flex-row items-center justify-center">
+            <div class="lg:w-[15%] w-[65%]">
+              <img src="./assets/logo.png" alt="" />
+            </div>
+            <h1 class="font-semibold ml-3 lg:block hidden">
+              Donate Bangladesh
+            </h1>
+          </div>
+
+          <div class="flex flex-row items-center justify-center">
+            <div class="lg:w-[20%] w-[20%]">
+              <img src="./assets/coin.png" alt="" />
+            </div>
+            <h1 id="myBalance" class="font-semibold whitespace-nowrap ml-2">
+              5500 BDT
+            </h1>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex flex-row justify-center pb-20">
+      <section class="w-[80%] mt-10">
+        <h1 class="text-3xl font-bold">Important FAQ</h1>
+
+        <div class="join join-vertical w-full mt-6">
+          <!-- 1 -->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-xl font-medium">
+              What is the Document Object Model (DOM)?
+            </div>
+            <div class="collapse-content">
+              <p class="text-sm leading-6">
+                DOM stands for Document Object Model that connects web pages to
+                scripts or programming languages by representing the structure
+                of a document—such as the HTML representing a web page—in
+                memory. The DOM represents a document with a logical tree. Each
+                branch of the tree ends in a node, and each node contains
+                objects.
+              </p>
+
+              <img class="w-[40%] mt-6" src="./assets/dom.png" alt="" />
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              How do you select an element from the DOM?
+            </div>
+            <div class="collapse-content">
+              <h3>
+                JavaScript provides several methods to select DOM elements.
+                <br />
+                <br />
+
+                <p>
+                  1. <strong>getElementById</strong> - Selects an element by its
+                  unique ID: <br />
+                  const element = document.getElementById('myId');
+                </p>
+                <br />
+
+                <p>
+                  2. <strong>getElementsByClassName</strong> - Selects all
+                  elements with a specific class (returns an HTMLCollection):
+                  <br />
+                  const elements = document.getElementsByClassName('myClass');
+                </p>
+                <br />
+
+                <p>
+                  3. <strong>getElementsByTagName</strong> - Selects all
+                  elements with a specific tag name (returns an HTMLCollection):
+                  <br />
+                  const elements = document.getElementsByTagName('div');
+                </p>
+                <br />
+
+                <p>
+                  4. <strong>querySelector</strong> - Selects the first element
+                  that matches a CSS selector: <br />
+                  const element = document.querySelector('.myClass');
+                </p>
+                <br />
+
+                <p>
+                  5. <strong>querySelectorAll</strong> - Selects all elements
+                  that match a CSS selector (returns a NodeList): <br />
+                  const elements = document.querySelectorAll('div.myClass');
+                </p>
+                <br />
+
+                Each method has its specific use case depending on whether
+                you're selecting by ID, class, tag, or CSS selector.
+              </h3>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              What is event delegation in the context of the DOM, and why is it
+              useful?
+            </div>
+            <div class="collapse-content">
+              <p>
+                Event delegation is a technique in the DOM where you attach a
+                single event listener to a parent element instead of attaching
+                it to multiple child elements. This listener can then handle
+                events from all child elements by taking advantage of event
+                propagation (specifically, event bubbling).
+              </p>
+              <br />
+
+              <p><strong>Why It's Useful:</strong></p>
+              <br />
+
+              <p>
+                Performance: Instead of attaching multiple listeners to each
+                child element, you only need one listener on the parent. This
+                reduces memory usage and improves performance, especially for
+                dynamic content.
+              </p>
+              <br />
+
+              <p>
+                Handling Dynamic Content: If new child elements are added
+                dynamically (e.g., with JavaScript), event delegation allows
+                those elements to inherit the event listener without requiring
+                additional code to attach new listeners.
+              </p>
+              <br />
+              <p>
+                Easier Maintenance: Since there's only one listener to manage,
+                it simplifies the code, making it more readable and easier to
+                debug. additional code to attach new listeners.
+              </p>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              How do you manipulate an element's attributes and styles using the
+              DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                To manipulate an element's attributes and styles using the DOM,
+                JavaScript provides several methods and properties.
+              </p>
+              <br />
+
+              <p><strong>Manipulating Attributes:</strong></p>
+              <br />
+
+              <p>getAttribute(): Retrieves the value of an attribute.</p>
+              <br />
+              <p>setAttribute(): Sets a new value for an attribute.</p>
+              <br />
+              <p>removeAttribute(): Removes an attribute from an element.</p>
+              <br />
+
+              <p><strong>Manipulating Styles:</strong></p>
+              <br />
+
+              <p>classList.add(): Adds a class to the element.</p>
+              <br />
+              <p>classList.remove(): Removes a class from the element.</p>
+              <br />
+              <p>classList.toggle(): Toggles a class on or off.</p>
+              <br />
+              <p>Inline Styles (Using style property)</p>
+              <br />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="./blog.js"></script>
+</html>
+
+<!-- 
+What is the Document Object Model (DOM)?
+            </div>
+            <div class="collapse-content">
+            <p class="text-sm">The Document Object Model (DOM) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory. The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects.</p>
+
+            <img class="w-[40%] mt-6" src="./assets/dom.png" alt=""> -->

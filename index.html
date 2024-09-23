@@ -15,52 +15,80 @@
       .font {
         font-family: "Lexend", sans-serif;
       }
+      .active-tab {
+        background-color: #b4f461;
+        color: black;
+        border: none;
+      }
+
+      .inactive-tab {
+        background-color: white;
+        color: #333;
+        border: 1px solid #d1d1d1;
+      }
     </style>
     <title>Donate A5</title>
   </head>
   <body class="font flex flex-col items-center">
     <!-- navbar -->
-    <nav class="w-full bg-[#F9F7F3] py-5 flex flex-row justify-center">
+    <nav
+      class="w-full flex flex-col items-center justify-center sticky top-0 z-40 backdrop-blur-xl"
+    >
       <div
-        class="flex flex-row gap-y-8 items-center justify-between lg:w-[80%] w-[90%]"
+        class="w-full flex flex-row items-center justify-center py-4 bg-[#F9F7F3]"
       >
-        <button
-          class="bg-[#B4F461] px-5 py-1.5 text-sm font-semibold rounded-lg"
+        <div
+          class="flex flex-row gap-y-8 items-center justify-between lg:w-[80%] w-[90%]"
         >
-          Blog
-        </button>
+          <button
+            id="blogButton"
+            class="bg-[#B4F461] px-5 py-1.5 text-sm font-semibold rounded-lg"
+          >
+            Blog
+          </button>
 
-        <div class="flex flex-row items-center justify-center">
-          <div class="lg:w-[15%] w-[65%]">
-            <img src="./assets/logo.png" alt="" />
+          <div class="flex flex-row items-center justify-center">
+            <div class="lg:w-[15%] w-[65%]">
+              <img src="./assets/logo.png" alt="" />
+            </div>
+            <h1 class="font-semibold ml-3 lg:block hidden">
+              Donate Bangladesh
+            </h1>
           </div>
-          <h1 class="font-semibold ml-3 lg:block hidden">Donate Bangladesh</h1>
-        </div>
 
-        <div class="flex flex-row items-center justify-center">
-          <div class="lg:w-[20%] w-[20%]">
-            <img src="./assets/coin.png" alt="" />
+          <div class="flex flex-row items-center justify-center">
+            <div class="lg:w-[20%] w-[20%]">
+              <img src="./assets/coin.png" alt="" />
+            </div>
+            <h1 id="myBalance" class="font-semibold whitespace-nowrap ml-2">
+              5500 BDT
+            </h1>
           </div>
-          <h1 id="myBalance" class="font-semibold whitespace-nowrap ml-2">5500 BDT</h1>
         </div>
       </div>
+      <!-- button section -->
+      <section class="w-[80%] flex flex-row justify-center mt-10">
+        <div class="flex flex-row gap-x-3">
+          <button
+            id="donationTab"
+            class="bg-[#B4F461] px-5 py-2 text-sm font-semibold rounded-md"
+          >
+            Donation
+          </button>
+          <button
+            id="historyTab"
+            class="border border-black/30 text-black/70 px-5 py-2 text-sm font-semibold rounded-md bg-white"
+          >
+            History
+          </button>
+        </div>
+      </section>
     </nav>
-    <!-- button section -->
-    <section class="w-[80%] flex flex-row justify-center mt-12">
-      <div class="flex flex-row gap-x-3">
-        <button id="donationTab"  class="bg-[#B4F461] px-5 py-2 text-sm font-semibold rounded-md">
-          Donation
-        </button>
-        <button id="historyTab" 
-          class="border border-black/30 text-black/70 px-5 py-2 text-sm font-semibold rounded-md"
-        >
-          History
-        </button>
-      </div>
-    </section>
 
     <!-- main -->
-    <main class="flex flex-col items-center justify-center pb-20 z-0 w-full">
+    <main
+      class="flex flex-col items-center justify-center pb-20 z-0 w-full mt-10"
+    >
       <!-- donation card tab -->
       <section id="donationSection" class="w-[80%]">
         <!-- card1 -->
@@ -80,7 +108,9 @@
               class="flex cursor-text items-center justify-center px-2 py-1.5 rounded-lg bg-[#f3f3f3] mb-4"
             >
               <img class="w-[25%]" src="./assets/coin.png" alt="" />
-              <h1 id="noakhaliTotal" class="text-[15px] ml-2 whitespace-nowrap">0 BDT</h1>
+              <h1 id="noakhaliTotal" class="text-[15px] ml-2 whitespace-nowrap">
+                0 BDT
+              </h1>
             </button>
 
             <h1 id="noyakhaliHeadText" class="font-bold text-lg">
@@ -146,7 +176,9 @@
               class="flex cursor-text items-center justify-center px-2 py-1.5 rounded-lg bg-[#f3f3f3] mb-4"
             >
               <img class="w-[25%]" src="./assets/coin.png" alt="" />
-              <h1 id="feniTotal" class="text-[15px] ml-2 whitespace-nowrap">0 BDT</h1>
+              <h1 id="feniTotal" class="text-[15px] ml-2 whitespace-nowrap">
+                0 BDT
+              </h1>
             </button>
 
             <h1 id="feniHeadText" class="font-bold text-lg">
@@ -213,7 +245,9 @@
               class="flex cursor-text items-center justify-center px-2 py-1.5 rounded-lg bg-[#f3f3f3] mb-4"
             >
               <img class="w-[25%]" src="./assets/coin.png" alt="" />
-              <h1 id="quotaTotal" class="text-[15px] ml-2 whitespace-nowrap">0 BDT</h1>
+              <h1 id="quotaTotal" class="text-[15px] ml-2 whitespace-nowrap">
+                0 BDT
+              </h1>
             </button>
 
             <h1 id="quotaHeadText" class="font-bold text-lg">
