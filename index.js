@@ -6,7 +6,6 @@ function setTextValue(id, value) {
   return (document.getElementById(id).innerText = value);
 }
 
-// jei section a hidden shseta hobe bg white else bg green
 
 // tabSwitch
 function tabSwitch(id) {
@@ -14,57 +13,21 @@ function tabSwitch(id) {
   document.getElementById("historySection").classList.add("hidden");
 
   document.getElementById(id).classList.remove("hidden");
-  
 }
+
 document.getElementById("donationTab").addEventListener("click", (e) => {
   tabSwitch("donationSection");
+
+  document.getElementById("donationTab").style.backgroundColor = '#B4F461'
+  document.getElementById("historyTab").style.backgroundColor = 'white'
 });
 document.getElementById("historyTab").addEventListener("click", (e) => {
   tabSwitch("historySection");
+
+  document.getElementById("historyTab").style.backgroundColor =  '#B4F461'
+  document.getElementById("donationTab").style.backgroundColor = 'white'
 });
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  const donationTab = document.getElementById("donationTab");
-  const historyTab = document.getElementById("historyTab");
-
-  const donationSection = document.getElementById("donationSection");
-  const historySection = document.getElementById("historySection");
-
-  // Set up event listener for the donation tab
-  donationTab.addEventListener("click", function () {
-    donationTab.style.backgroundColor = "red";
-    donationTab.style.color = "white";
-    
-    historyTab.style.backgroundColor = "white";
-    historyTab.style.color = "#333";
-    historyTab.style.border = "1px solid #d1d1d1";
-
-    // Show donation section, hide history section
-    donationSection.classList.remove("hidden");
-    historySection.classList.add("hidden");
-  });
-
-  // Set up event listener for the history tab
-  historyTab.addEventListener("click", function () {
-    historyTab.style.backgroundColor = "green";
-    historyTab.style.color = "white";
-    
-    donationTab.style.backgroundColor = "white";
-    donationTab.style.color = "#333";
-    donationTab.style.border = "1px solid #d1d1d1";
-
-    // Show history section, hide donation section
-    historySection.classList.remove("hidden");
-    donationSection.classList.add("hidden");
-  });
-});
-
-
-/* 
-function colorSwitch(id){
-    document.getElementById(id).classList.toggle("bg-[#B4F461]")
-} */
 
 // historyNewElement
 function historyNewElement(inputValue, setTextId) {
@@ -85,8 +48,6 @@ function historyNewElement(inputValue, setTextId) {
 }
 
 
-
-
 function checkIsAllDigit(value){
   let check = false;
 
@@ -104,13 +65,12 @@ function checkIsAllDigit(value){
 
 
 
+
 let newMyBalance = 5500;
 let noakhaliTotalDonation = 0;
 document.getElementById("donateNowButton1").addEventListener("click", (e) => {
   let noakhaliInputValue = getInputFromId("noakhaliInput");
 
-  // console.log(typeof document.getElementById('noakhaliInput').value);
-  
 
   if (isNaN(noakhaliInputValue) == true || noakhaliInputValue < 0 || checkIsAllDigit(document.getElementById('noakhaliInput').value)==false) {
     alert("Please enter valid amount");
