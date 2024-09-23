@@ -31,63 +31,75 @@
   </head>
   <body class="font flex flex-col items-center">
     <!-- navbar -->
-    <nav
-      class="w-full flex flex-col items-center justify-center sticky top-0 z-40 backdrop-blur-xl"
-    >
+    <!-- sticky top-0 z-40 backdrop-blur-xl -->
+    <nav class="w-full flex flex-col items-center justify-center">
       <div
-        class="w-full flex flex-row items-center justify-center py-4 bg-[#F9F7F3]"
+        class="w-full flex flex-row items-center justify-center py-10 bg-[#f9f3f3]"
       >
-        <div
-          class="flex flex-row gap-y-8 items-center justify-between lg:w-[80%] w-[90%]"
-        >
-          <button
-            id="blogButton"
-            class="bg-[#B4F461] px-5 py-1.5 text-sm font-semibold rounded-lg"
+        <!-- <div class="fixed top-0 z-10">
+          bg-[#f9f3f3]
+          <h1 class="sticky top-0 bg-black">okay</h1>
+        </div> -->
+
+        <!-- navbar + button -->
+        <div class="fixed top-0 z-10 flex flex-col items-center w-full py-6 backdrop-blur-md">
+          <!-- nav list -->
+          <div
+            class="flex flex-row gap-y-8 items-center justify-between lg:w-[80%] w-[90%]"
           >
-            Blog
-          </button>
+            <button
+              id="blogButton"
+              class="bg-[#B4F461] px-5 py-1.5 text-sm font-semibold rounded-lg"
+            >
+              Blog
+            </button>
 
-          <div class="flex flex-row items-center justify-center">
-            <div class="lg:w-[15%] w-[65%]">
-              <img src="./assets/logo.png" alt="" />
+            <div class="flex flex-row items-center justify-center">
+              <div class="lg:w-[15%] w-[65%]">
+                <img src="./assets/logo.png" alt="" />
+              </div>
+              <h1 class="font-semibold ml-3 lg:block hidden">
+                Donate Bangladesh
+              </h1>
             </div>
-            <h1 class="font-semibold ml-3 lg:block hidden">
-              Donate Bangladesh
-            </h1>
+
+            <div class="flex flex-row items-center justify-center">
+              <div class="lg:w-[20%] w-[20%]">
+                <img src="./assets/coin.png" alt="" />
+              </div>
+              <h1 id="myBalance" class="font-semibold whitespace-nowrap ml-2">
+                5500 BDT
+              </h1>
+            </div>
           </div>
 
-          <div class="flex flex-row items-center justify-center">
-            <div class="lg:w-[20%] w-[20%]">
-              <img src="./assets/coin.png" alt="" />
+          <!-- button section -->
+          <section class="w-[80%] flex flex-row justify-center mt-14">
+            <div class="flex flex-row gap-x-3">
+              <button
+                id="donationTab"
+                class="bg-[#B4F461] px-5 py-2 text-sm font-semibold rounded-md"
+              >
+                Donation
+              </button>
+              <button
+                id="historyTab"
+                class="border border-black/30 text-black/70 px-5 py-2 text-sm font-semibold rounded-md bg-white"
+              >
+                History
+              </button>
             </div>
-            <h1 id="myBalance" class="font-semibold whitespace-nowrap ml-2">
-              5500 BDT
-            </h1>
-          </div>
+          </section>
+
         </div>
+
+
       </div>
-      <!-- button section -->
-      <section class="w-[80%] flex flex-row justify-center mt-10">
-        <div class="flex flex-row gap-x-3">
-          <button
-            id="donationTab"
-            class="bg-[#B4F461] px-5 py-2 text-sm font-semibold rounded-md"
-          >
-            Donation
-          </button>
-          <button
-            id="historyTab"
-            class="border border-black/30 text-black/70 px-5 py-2 text-sm font-semibold rounded-md bg-white"
-          >
-            History
-          </button>
-        </div>
-      </section>
     </nav>
 
     <!-- main -->
     <main
-      class="flex flex-col items-center justify-center pb-20 z-0 w-full mt-10"
+      class="flex flex-col items-center justify-center pb-20 z-0 w-full mt-20"
     >
       <!-- donation card tab -->
       <section id="donationSection" class="w-[80%]">
@@ -323,3 +335,48 @@
   </body>
   <script src="index.js"></script>
 </html>
+
+<!-- nav list -->
+<div
+  class="flex flex-row gap-y-8 items-center justify-between lg:w-[80%] w-[90%]"
+>
+  <button
+    id="blogButton"
+    class="bg-[#B4F461] px-5 py-1.5 text-sm font-semibold rounded-lg"
+  >
+    Blog
+  </button>
+
+  <div class="flex flex-row items-center justify-center">
+    <div class="lg:w-[15%] w-[65%]">
+      <img src="./assets/logo.png" alt="" />
+    </div>
+    <h1 class="font-semibold ml-3 lg:block hidden">Donate Bangladesh</h1>
+  </div>
+
+  <div class="flex flex-row items-center justify-center">
+    <div class="lg:w-[20%] w-[20%]">
+      <img src="./assets/coin.png" alt="" />
+    </div>
+    <h1 id="myBalance" class="font-semibold whitespace-nowrap ml-2">
+      5500 BDT
+    </h1>
+  </div>
+</div>
+<!-- button section -->
+<section class="w-[80%] flex flex-row justify-center mt-10">
+  <div class="flex flex-row gap-x-3">
+    <button
+      id="donationTab"
+      class="bg-[#B4F461] px-5 py-2 text-sm font-semibold rounded-md"
+    >
+      Donation
+    </button>
+    <button
+      id="historyTab"
+      class="border border-black/30 text-black/70 px-5 py-2 text-sm font-semibold rounded-md bg-white"
+    >
+      History
+    </button>
+  </div>
+</section>
