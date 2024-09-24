@@ -74,7 +74,7 @@ let noakhaliTotalDonation = 0;
 document.getElementById("donateNowButton1").addEventListener("click", (e) => {
   let noakhaliInputValue = getInputFromId("noakhaliInput");
 
-  if (isNaN(noakhaliInputValue) == true || noakhaliInputValue < 0 || checkIsAllDigit(document.getElementById('noakhaliInput').value)==false) {
+  if (isNaN(noakhaliInputValue) == true || noakhaliInputValue <= 0 || checkIsAllDigit(document.getElementById('noakhaliInput').value)==false) {
     alert("Please enter valid amount");
     document.getElementById("noakhaliInput").value = "";
   }
@@ -101,7 +101,7 @@ let feniTotalDonation = 0;
 document.getElementById("donateNowButton2").addEventListener("click", (e) => {
   let feniInputValue = getInputFromId("feniInput");
 
-  if (isNaN(feniInputValue) == true || feniInputValue < 0 || checkIsAllDigit(document.getElementById('feniInput').value)==false) {
+  if (isNaN(feniInputValue) == true || feniInputValue <= 0 || checkIsAllDigit(document.getElementById('feniInput').value)==false) {
     alert("Please enter valid amount");
     document.getElementById("feniInput").value = "";
   }
@@ -130,7 +130,7 @@ let quotaTotalDonation = 0;
 document.getElementById("donateNowButton3").addEventListener("click", (e) => {
   let quotaInputValue = getInputFromId("quotaInput");
 
-  if (isNaN(quotaInputValue) == true || quotaInputValue < 0 || checkIsAllDigit(document.getElementById('quotaInput').value)==false) {
+  if (isNaN(quotaInputValue) == true || quotaInputValue <= 0 || checkIsAllDigit(document.getElementById('quotaInput').value)==false) {
     alert("Please enter valid amount");
     document.getElementById("quotaInput").value = "";
   }
