@@ -23,6 +23,8 @@ document.getElementById("donationTab").addEventListener("click", (e) => {
   document.getElementById("donationTab").style.border = '0px solid #0000004e'
   document.getElementById("historyTab").style.border = '1px solid #0000004e'
   document.getElementById("historyTab").style.backgroundColor = 'white'
+  document.getElementById('historyFooter').classList.add('hidden')
+
 });
 document.getElementById("historyTab").addEventListener("click", (e) => {
   tabSwitch("historySection");
@@ -31,6 +33,7 @@ document.getElementById("historyTab").addEventListener("click", (e) => {
   document.getElementById("historyTab").style.border = '0px solid #0000004e'
   document.getElementById("donationTab").style.backgroundColor = 'white'
   document.getElementById("donationTab").style.border = '1px solid #0000004e'
+  document.getElementById('historyFooter').classList.remove('hidden')
 });
 
 
