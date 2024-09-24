@@ -48,7 +48,7 @@ function historyNewElement(inputValue, setTextId) {
   newDiv.innerHTML =
   `<h1 class="font-semibold"> ${inputValue} Taka is ${document.getElementById(setTextId).innerText} </h1>
   <p class="font-light text-sm text-black/80 mt-2"> Date : ${Date(Date.now()).toString()}</p>`;
-  document.getElementById("historySection").appendChild(newDiv);
+  document.getElementById("historySection").prepend(newDiv);
 }
 
 // extra validation
@@ -118,7 +118,7 @@ document.getElementById("donateNowButton2").addEventListener("click", (e) => {
       document.getElementById("feniInput").value = "";
       historyNewElement(feniInputValue, "feniHeadText");
       //modal
-      document.getElementById("donateNowButton1").setAttribute("onclick", my_modal_2.showModal());
+      document.getElementById("donateNowButton2").setAttribute("onclick", my_modal_2.showModal());
     }
   }
 });
@@ -147,7 +147,7 @@ document.getElementById("donateNowButton3").addEventListener("click", (e) => {
       document.getElementById("quotaInput").value = "";
       historyNewElement(quotaInputValue, "quotaHeadText");
       //modal
-      document.getElementById("donateNowButton1").setAttribute("onclick", my_modal_3.showModal());
+      document.getElementById("donateNowButton3").setAttribute("onclick", my_modal_3.showModal());
     }
   }
 });
