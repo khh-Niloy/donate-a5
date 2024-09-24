@@ -87,51 +87,52 @@
               How do you select an element from the DOM?
             </div>
             <div class="collapse-content">
-              <h3>
-                JavaScript provides several methods to select DOM elements.
-                <br />
-                <br />
+              <p>JavaScript provides several methods to select DOM elements.</p>
+              <br />
 
-                <p>
-                  1. <strong>getElementById</strong> - Selects an element by its
-                  unique ID: <br />
-                  const element = document.getElementById('myId');
-                </p>
-                <br />
+              <p>
+                1. <strong>getElementById</strong> - Selects an element by its
+                unique ID: <br />
+                const element = document.getElementById('myId');
+              </p>
+              <br />
 
-                <p>
-                  2. <strong>getElementsByClassName</strong> - Selects all
-                  elements with a specific class (returns an HTMLCollection):
-                  <br />
-                  const elements = document.getElementsByClassName('myClass');
-                </p>
+              <p>
+                2. <strong>getElementsByClassName</strong> - Selects all
+                elements with a specific class (returns an HTMLCollection):
                 <br />
+                document.getElementsByClassName<br
+                  class="lg:hidden block"
+                />('myClass')
+              </p>
+              <br />
 
-                <p>
-                  3. <strong>getElementsByTagName</strong> - Selects all
-                  elements with a specific tag name (returns an HTMLCollection):
-                  <br />
-                  const elements = document.getElementsByTagName('div');
-                </p>
-                <br />
+              <p>
+                3. <strong>getElementsByTagName</strong> - Selects all elements
+                with a specific tag name (returns an HTMLCollection): <br />
+                document.getElementsByTagName<br
+                  class="lg:hidden block"
+                />('div')
+              </p>
+              <br />
 
-                <p>
-                  4. <strong>querySelector</strong> - Selects the first element
-                  that matches a CSS selector: <br />
-                  const element = document.querySelector('.myClass');
-                </p>
-                <br />
+              <p>
+                4. <strong>querySelector</strong> - Selects the first element
+                that matches a CSS selector: <br />
+                const element = document.querySelector<br
+                  class="lg:hidden block"
+                />('.myClass');
+              </p>
+              <br />
 
-                <p>
-                  5. <strong>querySelectorAll</strong> - Selects all elements
-                  that match a CSS selector (returns a NodeList): <br />
-                  const elements = document.querySelectorAll('div.myClass');
-                </p>
-                <br />
-
-                Each method has its specific use case depending on whether
-                you're selecting by ID, class, tag, or CSS selector.
-              </h3>
+              <p>
+                5. <strong>querySelectorAll</strong> - Selects all elements that
+                match a CSS selector (returns a NodeList): <br />
+                const elements = document.querySelectorAll<br
+                  class="lg:hidden block"
+                />('div.myClass');
+              </p>
+              <br />
             </div>
           </div>
           <!-- 3 -->
@@ -219,11 +220,3 @@
   </body>
   <script src="./blog.js"></script>
 </html>
-
-<!-- 
-What is the Document Object Model (DOM)?
-            </div>
-            <div class="collapse-content">
-            <p class="text-sm">The Document Object Model (DOM) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory. The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects.</p>
-
-            <img class="w-[40%] mt-6" src="./assets/dom.png" alt=""> -->
